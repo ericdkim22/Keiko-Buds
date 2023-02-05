@@ -13,6 +13,13 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MapSectionComponent } from './components/map-section/map-section.component';
 import { ContentComponent } from './components/content/content.component';
 
+import {MatIconModule } from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button'
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar'
+// import { MatMenu } from "@angular/material/menu";
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +34,15 @@ import { ContentComponent } from './components/content/content.component';
     MapSectionComponent,
     ContentComponent
   ],
+  exports:[
+    MatMenuModule
+  ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
